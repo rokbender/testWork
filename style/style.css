@@ -1,0 +1,231 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap');
+
+:root {
+    --colorBG1:  #F6F7FA;
+    --colorSB:  #FFFFFF;
+    --colorText: #1B1B1B;
+    --color1: #1FC0AE;
+    --colorInput: #8E99AB;
+    --colorLine: #009FE3;
+
+}
+body{
+    font-size: 16px;
+    background-color: var(--colorBG1);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+.wrapper{
+    width: 100vw;
+    
+    display: flex;
+    margin-bottom: 37px;
+}
+.sidebar{
+    background: var(--colorSB);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px 0px;
+}
+.navlist{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.nav_item{
+    align-self: center;
+    padding: 0px 16px;
+}
+.nav_link{
+    display: flex;
+    align-self: center;
+    padding: 8px 12px;
+    align-items: center;
+    column-gap: 12px;
+    width: 248px;
+}
+.nav_link:hover{
+    border-radius: 6px;
+    background: rgba(31, 192, 174, 0.19);
+
+}
+.nav_link:hover svg{
+    stroke: var(--colorText);
+}
+.nav_link svg{
+    stroke: #667085;
+}
+.main{
+    width:calc(100vw - 285px);
+    max-width: 1160px;
+    flex-shrink: 0;
+    padding:0px 62px;
+}
+h1{
+    color: #1B1B1B;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.96px;
+    margin: 0px auto;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.row_items{
+    display: flex;
+    column-gap: 144px;
+    
+}
+.text_item{text-align: center;}
+.circle{
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+    border-radius: 72px;
+    border: 1px solid #8E99AB;
+    background: #EAECF0;
+    box-shadow: 0px 6px 4px 0px rgba(16, 24, 40, 0.2);
+    margin-bottom: 16px;
+    position: relative;
+}
+.row_item.active .circle::after{
+    content: "";
+    display: block;
+    border:1.4px dashed #009FE3 ;
+    width: 159px;
+    position: absolute;
+    top: 50%;
+    left:calc(72px + 12px);
+}
+.non_active .circle::after{
+    content: "";
+    display: block;
+    border:1.4px dashed #EAECF0 ;
+    width: 159px;
+    position: absolute;
+    top: 50%;
+    left:calc(72px + 12px);
+} 
+
+.row_item p{
+    color: #8E99AB;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.28px;
+}
+.row_item.active p{
+    color: var(--colorText);
+}
+.row_item.active .circle{
+    background: #1FC0AE;
+}
+.info{
+    margin-top: 70px;
+    display: flex;
+    column-gap: 20px;
+   
+}
+.b12{
+    width: 508px;
+    border-radius: 12px;
+    background: #FFF;
+    padding: 20px;
+}
+h5{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 27px;
+    margin-bottom: 23px;
+}
+.tracking p{
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 12px;
+}
+.tracking span{
+    color: #8E99AB;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.tracking_item{
+    display: flex;
+   justify-content: space-between;
+}
+.another_block{
+    display: flex;
+    color: #1FC0AE;
+    align-items: center;
+    justify-content: space-between;
+}
+.flex_box h5{
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 32.883px;
+    text-align: center;
+    margin-bottom: 6px;
+}
+.flex_box p{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;   
+}
+.garbage{
+    border-radius: 12px;
+    background: #FFF;   
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    padding: 20px;
+    margin-top: 14px;
+   
+}
+label{
+    display: block;
+    color: #8E99AB;
+    font-size: 12px;
+    line-height: 24px;
+}
+select{
+    display: flex;
+    width: 100%;
+    padding: 8px 12px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px solid #EAECF0;
+    background: #F9FAFB;
+    color: #8E99AB;
+    margin-bottom: 17px;
+}
+select:hover{
+    color:#1B1B1B; 
+}
+button{
+    display: block;
+    display: flex;
+    width: 88px;
+    padding: 10px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background: #1FC0AE;
+    color: white;
+    margin-top: 50px;
+    transition:all 0.3s ease-in 
+}
+button:hover{
+    width: 100%;
+}
+button:active{
+    color: #1B1B1B;
+    box-shadow:0px 5px 4px 0px rgba(16, 24, 40, 0.5) ;
+}
+.btn{
+    display: flex;
+    justify-content: end;
+}
